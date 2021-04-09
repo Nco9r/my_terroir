@@ -1,0 +1,29 @@
+{
+  "name": "my-terroir",
+  "version": "1.0.0",
+  "description": "Produits et cuisine de terroir.",
+  "author": "Nicolas ROUX",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "gsap": "^3.6.1",
+    "locomotive-scroll": "^4.1.1",
+    "mailchimp-api-v3": "^1.15.0",
+    "net": "^1.0.2",
+    "nuxt": "^2.15.3",
+    "tls": "0.0.1",
+    "vee-validate": "^3.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

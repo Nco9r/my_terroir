@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="237.221" height="237.22" viewBox="0 0 237.221 237.22">
+  <defs>
+    <filter id="Tracé_1726" x="0" y="0" width="237.221" height="237.22" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_321" data-name="Groupe 321" transform="translate(-68.963 -367.199)">
+    <g id="Groupe_319" data-name="Groupe 319">
+      <g transform="matrix(1, 0, 0, 1, 68.96, 367.2)" filter="url(#Tracé_1726)">
+        <path id="Tracé_1726-2" data-name="Tracé 1726" d="M43.61,0A43.61,43.61,0,1,1,0,43.61,43.61,43.61,0,0,1,43.61,0Z" transform="translate(75 72)" fill="#fff"/>
+      </g>
+      <g id="Groupe_56" data-name="Groupe 56" transform="translate(0.072 -256.955)">
+        <text id="_15kgs" data-name="+15kgs" transform="translate(188.5 745.585)" fill="#202020" font-size="31" font-family="SourceSansPro-Black, Source Sans Pro" font-weight="800" letter-spacing="0.01em"><tspan x="-50.003" y="0">+15kgs</tspan></text>
+      </g>
+    </g>
+    <rect id="Rectangle_235" data-name="Rectangle 235" width="88" height="7" transform="matrix(0.839, -0.545, 0.545, 0.839, 149.168, 504.521)" fill="#e96328"/>
+  </g>
+</svg>
