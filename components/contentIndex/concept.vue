@@ -6,7 +6,7 @@
                 <p>boutique</p>
             </div>
             <div class="title_storie">
-                <h2>avec my terroir en <strong>payer que le produit</strong><span class="orange">.</span></h2>
+                <h2>avec my terroir ne <strong>payer que le produit</strong><span class="orange">.</span></h2>
             </div>
             <hr class="hr_title">
           </div>
