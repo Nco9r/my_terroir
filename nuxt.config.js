@@ -54,7 +54,13 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/strapi'
   ],
+
+  strapi: {
+    url: 'https://my-terroir-admin.herokuapp.com',
+    entities: ['Articles']
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

@@ -2,7 +2,7 @@
      <section class="storie">
         <div class="block_storie">
           <div class="storie_img">
-            <img src="@/assets/img/jpg/viande.jpg" alt="">
+            <img src="@/assets/img/jpg/brasero.jpg" alt="">
           </div>
           <div class="storie_content">
             <div class="storie_title">

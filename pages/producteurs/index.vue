@@ -26,6 +26,7 @@
                 </div>
             </div>
             <categorie/>
+            
           </section>
           <newsletters/>
       </main>
@@ -41,6 +42,7 @@ import categorie from '~/components/default/categorie'
 
 
 export default {
+
     mounted() {
         this.$nextTick(() => {
         this.$nuxt.$loading.start()

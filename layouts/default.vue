@@ -25,9 +25,6 @@ html {
   z-index: auto;
 }
 
-body {
-  
-}
 
 *,
 *:before,

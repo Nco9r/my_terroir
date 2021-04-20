@@ -10,7 +10,7 @@
             <hr class="hr_title">
       </div>
       <div class="cards_blog">
-          <div class="cards">
+          <div class="cards" v-for="article in articles" :key="article.id">
               <div class="cards_img">
                   <img src="@/assets/img/jpg/mariage.jpg" alt="">
               </div>
@@ -26,7 +26,7 @@
                   <p>Traiteur</p>
               </div>
               <div class="title_cards">
-                  <h3>Comment <strong>organiser</strong> un mariage ?</h3>
+                  <h3>{{article.title}}</h3>
               </div>
               <div class="contentIndex">
                   <p>Dans cet article nous avons voulu vous aiguiller un petit peu sur l’organisation de vos événements afin qu’ils soient le plus réussi possible et en vous donnant les clés pour vous simplifier la vie. </p>
@@ -37,66 +37,6 @@
                 </svg>Lire la suite </nuxt-link>
               </div>
           </div>
-
-           <div class="cards">
-              <div class="cards_img">
-                  <img src="@/assets/img/jpg/mariage.jpg" alt="">
-              </div>
-              <div class="infos_cards">
-                  <div class="date">
-                      <p>Le 12/03/1993</p>
-                  </div>
-                  <div class="auteur">
-                      <p>By <span class="orange">Stéphane E.</span></p>
-                  </div>
-              </div>
-              <div class="categorie">
-                  <p>Traiteur</p>
-              </div>
-              <div class="title_cards">
-                  <h3>Comment <strong>organiser</strong> un mariage?</h3>
-              </div>
-              <div class="contentIndex">
-                  <p>Dans cet article nous avons voulu vous aiguiller un petit peu sur l’organisation de vos événements afin qu’ils soient le plus réussi possible et en vous donnant les clés pour vous simplifier la vie.</p>
-              </div>
-              <div class="btn_cards">
-                  <nuxt-link to="/"><svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
-                <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="none"/>
-                </svg>Lire la suite </nuxt-link>
-              </div>
-          </div>
- <div class="cards">
-              <div class="cards_img">
-                  <img src="@/assets/img/jpg/mariage.jpg" alt="">
-              </div>
-              <div class="infos_cards">
-                  <div class="date">
-                      <p>Le 12/03/1993</p>
-                  </div>
-                  <div class="auteur">
-                      <p>By <span class="orange">Stéphane E.</span></p>
-                  </div>
-              </div>
-              <div class="categorie">
-                  <p>Traiteur</p>
-              </div>
-              <div class="title_cards">
-                  <h3>Comment <strong>organiser</strong> un mariage ?</h3>
-              </div>
-              <div class="contentIndex">
-                  <p>Dans cet article nous avons voulu vous aiguiller un petit peu sur l’organisation de vos événements afin qu’ils soient le plus réussi possible et en vous donnant les clés pour vous simplifier la vie.</p>
-              </div>
-              <div class="btn_cards">
-                  <nuxt-link to="/"><svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
-                <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="none"/>
-                </svg>Lire la suite </nuxt-link>
-              </div>
-          </div>
-
-
-
-
-
       </div>
        <div class="btn_hero">
               <button> <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
@@ -108,6 +48,10 @@
 
 <script>
 export default {
+    async asyncData({ $strapi }) {
+        const articles = await $strapi.$articles.find('')
+        return { articles }
+    },
 
 }
 </script>

@@ -23,15 +23,25 @@
             </div>
             <div class="block_right">
                 <div class="prestations">
-                    <div class="title_prestation">
+                    <div class="items_prestations">
+                        <div class="title_prestation">
                         <h3>Nos différents <strong>prestations.</strong></h3>
                     </div>
-                    <div class="items_prestations">
                         <div class="items" >
+                            <div class="items_img">
+                                    <img src="@/assets/img/jpg/cocktails.jpg" alt="">
+                            </div>
+                            <div class="items_price">
+                                <p>à partir de <br> 8€/pers</p>
+                            </div>
                             <div class="title_items">
                                 <h4 :class="{ title_color : plus}">cocktails et buffets</h4>
                                 <span></span>
                                  <svg :class="{ rotate : plus}" @click="openContent" width="100%" height="100%" viewBox="0 0 32 34" fill="" xmlns="http://www.w3.org/2000/svg"><path :class="{ color: plus }" d="M18.982 13.6321H32V19.2453H18.982V34H13.018V19.2453H0V13.6321H13.018V0H18.982V13.6321Z" fill="#D9D9D9"></path></svg>
+                            </div>
+                            <div class="description_content">
+                                <p>Des prestations en toute simplicité qui épateront tous vos invités par la qualité des
+                                    produits utilisés et l’ambiance chaleureuse qui en ressort. </p>
                             </div>
                             <div class="content_items" v-if="plus">
                                 <div class="title_content">
@@ -66,20 +76,31 @@
                                         </li>
                                     </ul>
                                 </div>
-                               <div class="btn_hero">
+                            </div>
+                            <hr>
+                            <div class="btn_hero">
                                 <button> 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
                                         <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
-                                    </svg>En savoir plus</button>
+                                    </svg>En savoir plus
+                                </button>
                                 </div>
-                            </div>
                         </div>
 
                             <div class="items" >
+                                <div class="items_img">
+                                    <img src="@/assets/img/jpg/brasero.jpg" alt="">
+                                </div>
+                                 <div class="items_price">
+                                <p>à partir de <br> 25€/pers</p>
+                            </div>
                             <div class="title_items">
                                 <h4 :class="{ title_color : plus_1}">brasero ofyr</h4>
                                 <span></span>
                                  <svg  :class="{ rotate : plus_1}" @click="openContent_1" width="100%" height="100%" viewBox="0 0 32 34" fill="" xmlns="http://www.w3.org/2000/svg"><path :class="{ color: plus_1 }" d="M18.982 13.6321H32V19.2453H18.982V34H13.018V19.2453H0V13.6321H13.018V0H18.982V13.6321Z" fill="#D9D9D9"></path></svg>
+                            </div>
+                            <div class="description_content">
+                                <p>My Terroir s’associe au célèbre brasero-plancha OFYR. La cuisson de légumes, poissons, cuisinés en cocotte, brochettes, tout est possible ! </p>
                             </div>
                             <div class="content_items" v-if="plus_1">
                                 <div class="title_content">
@@ -98,29 +119,65 @@
                                         </li>
                                     </ul>
                                 </div>
-                               <div class="btn_hero">
+                            </div>
+                            <hr>
+                            <div class="btn_hero">
                                 <button> 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
                                         <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
                                     </svg>En savoir plus</button>
                                 </div>
-                            </div>
                         </div>
 
                         <div class="items" >
+                            <div class="items_img">
+                                    <img src="@/assets/img/jpg/grillades.jpg" alt="">
+                            </div>
+                            <div class="items_price">
+                                <p>à partir de <br> sur devis</p>
+                            </div>
                             <div class="title_items">
                                 <h4 :class="{ title_color : plus_2}">Repas et grillades</h4>
                                 <span></span>
                                  <svg   :class="{ rotate : plus_2}" @click="openContent_2" width="100%" height="100%" viewBox="0 0 32 34" fill="" xmlns="http://www.w3.org/2000/svg"><path :class="{ color: plus_2 }" d="M18.982 13.6321H32V19.2453H18.982V34H13.018V19.2453H0V13.6321H13.018V0H18.982V13.6321Z" fill="#D9D9D9"></path></svg>
                             </div>
+                             <div class="description_content">
+                                <p>Une prestation haut de gamme que vous n’êtes pas prêt d’oublier. Nous présentons les viandes fraîches à table
+avant cuisson. </p>
+                            </div>
+                            <hr>
+                             <div class="btn_hero">
+                                <button> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+                                        <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
+                                    </svg>En savoir plus
+                                </button>
+                                </div>
                         </div>
 
                             <div class="items" >
+                                <div class="items_img">
+                                    <img src="@/assets/img/jpg/mariages.jpg" alt="">
+                            </div>
+                            <div class="items_price">
+                                <p>à partir de <br> sur devis</p>
+                            </div>
                             <div class="title_items">
                                 <h4 :class="{ title_color : plus_3}">mariage</h4>
                                 <span></span>
                                  <svg :class="{ rotate : plus_3}" @click="openContent_3" width="100%" height="100%" viewBox="0 0 32 34" fill="" xmlns="http://www.w3.org/2000/svg"><path :class="{ color: plus_3 }" d="M18.982 13.6321H32V19.2453H18.982V34H13.018V19.2453H0V13.6321H13.018V0H18.982V13.6321Z" fill="#D9D9D9"></path></svg>
                             </div>
+                            <div class="description_content">
+                                <p> Mariages chic dans des demeures d’exception, demandez-nous toutes les folies nous savons vous les réaliser. </p>
+                            </div>
+                            <hr>
+                            <div class="btn_hero">
+                                <button> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+                                        <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
+                                    </svg>En savoir plus
+                                </button>
+                                </div>
                         </div>
                 
 
@@ -183,7 +240,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .color {
     fill: var(--orange)!important;
@@ -249,10 +306,10 @@ export default {
 }
 
 .content_traiteur p{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 16px; 
     color: var(--black);
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .title_prestation h3 {
@@ -260,7 +317,6 @@ export default {
     font-size: 28px;
     font-weight: lighter; 
     margin-top: 20px;
-    padding: 0 15Px;
     color: var(--orange);
     text-transform: uppercase; 
 }
@@ -268,11 +324,50 @@ export default {
 .items_prestations {
     background-color: var(--gray);
     margin-top: 20px;
-    padding: 0 15px 30px 15px;
+    padding: 5px 15px 30px 15px;
 }
 
 .items {
-    padding: 10px 15px 0 15Px;
+    padding: 15Px;
+    background-color: #fff;
+    border-radius: 5Px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.items_price {
+    position: absolute; 
+    right: 50px;
+    top: 220px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    display: flex; 
+}
+
+.items_price p{
+    font-size: 14px; 
+    font-weight: bold; 
+    color: white;
+    display: flex; 
+    margin: auto; 
+    text-align: center; 
+}
+
+.items_img img{
+    width: 100%; 
+    height: 250px;
+    object-fit: cover;
+}
+
+.description_content {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px; 
+    color: var(--black);
+    line-height: 24px;
 }
 
 .title_items {
@@ -306,12 +401,11 @@ export default {
 }
 
 .content_traiteur {
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
 .content_traiteur ul li {
-    margin-top: 10px;
     color: var(--orange);
 }
 
@@ -320,26 +414,37 @@ export default {
     font-family: bebas-neue-pro-expanded, sans-serif; 
     font-weight: lighter;
     font-size: 16px;
+}
 
+hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: var(--black);
+    opacity: .1;
+}
+
+.btn_hero {
+display: flex; 
+    justify-content: flex-start;
 
 }
 
 .btn_hero button {
-    margin: 20px auto; 
-    padding: 8px 16px; 
-    width: 100%;
+    margin-top: 15px; 
+    padding: 8px 0px; 
     font-family: bebas-neue-pro, sans-serif; 
-    background-color: var(--orange);
     border: none; 
-    box-shadow: 4px 4px rgba(218, 71, 9, 0.486);
+    display: flex; 
+    justify-content: space-around;
+    background-color: white;
     text-decoration: none;
-    color: white;
-    font-size: 20px;
+    color: var(--orange);
+    font-size: 16px;
     font-weight: bold; 
     text-transform: uppercase;
     cursor: pointer; 
     outline: none; 
-
 }
 
 .btn_hero button:hover {
@@ -348,7 +453,14 @@ export default {
 
 .btn_hero button svg {
     margin-right: 10px;
+    width: 20px;
 }
+
+.btn_hero button path{
+    margin-right: 10px;
+    fill: var(--orange);
+}
+
 
 
 
