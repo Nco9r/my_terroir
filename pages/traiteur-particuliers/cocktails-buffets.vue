@@ -1,31 +1,147 @@
 <template>
   <div>
       <the-header/>
-      <main>
-          <section class="traiteur">
-              <heroTraiteur/>
-              <div class="block_left">
-                <div class="title_traiteur">
-                    <div class="title_before">
-                        <p>restauration</p>
-                    </div>
-                    <div class="title">
-                        <h1>Notre <strong>service traiteur</strong> pour vos évènements<span class="orange">.</span></h1>
-                    </div>
-                    <hr class="hr_title">
-                </div>
-                <div class="content_traiteur">
-                    <p>Notre équipe vient chez vous ou dans la salle de <strong>votre choix</strong>, avec tout le matériel nécessaire pour <strong>cuire et servir</strong>.</p>
-                    <p>Vous n’avez rien à penser et vous pouvez profiter entièrement de vos invités. Selon la prestation choisie, vos convives se serviront au buffet ou aux différents stands animés autour des produits de terroirs. </p>
-                    <p>Dans les cocktails avec service, nos gentils serveurs viendront directement proposer à vos convives tous les bons produits que vous avez sélectionné. Bien entendu, l’histoire du produit et du producteur sera racontée.</p>
-                    <p>Etant de gros mangeurs, nous avons tendance à vous proposer des quantités largement suffisante mais n’hésitez pas à nous faire savoir si vous connaissez bien vos convives, quels type de mangeurs ils sont.</p>
-                </div>
-            </div>
-            <div class="block_right">
-                <div class="prestations">
+      <main class="content_prestations">
+          <div class="block_right">
+              <div class="title_block_content">
+                  <h2>Cocktails et buffets</h2>
+                  <p>Des prestations en toute simplicité qui épateront tous vos invités par la qualité des
+                                    produits utilisés et l’ambiance chaleureuse qui en ressort.</p>
+              </div>
+              <div class="img_block">
+                  <img src="@/assets/img/jpg/cocktails.jpg" alt="">
+              </div>
+              <!-- <div class="info">
+                  <div class="service">
+                      <img src="@/assets/img/svg/service.svg" alt="">
+                      <p>avec et sans service</p>
+                  </div>
+                   <div class="service">
+                      <img src="@/assets/img/svg/mobilier.svg" alt="">
+                      <p>Location de matériel disponible</p>
+                  </div>
+              </div> -->
+              <div class="details">
+                  <div class="details_group">
+                      <h3>Buffets <strong>déposés</strong></h3>
+                      <p>+</p>
+                  </div>
+                  <div class="group">
+                      <div class="title_group" @click="apero = !apero">
+                          <p>L'apéro</p>
+                          <p>8€/pers</p>
+                      </div>
+                      <div class="content_group" v-if="apero">
+                          <p>Assortiment de charcuteries artisanales et fromages affinés du moment</p>
+                      </div>
+                      <div class="title_group" @click="bBasque = !bBasque">
+                          <p>Buffet Basque</p>
+                          <p>15	€/pers</p>
+                      </div>
+                      <div class="content_group" v-if="bBasque">
+                          <p><strong>Amuses bouches :</strong> <br>
+                          tartelette de boudin au piment d’espelette et confits d’oignons <br>
+                            tortilla au chorizo <br>
+                            pintxo piperade et txistorra <br>
+                            pintxo de filet de thon et poivrons grillees </p>
+                            <p><strong>Charcuteries :</strong> <br> jambon de bayonne de la ferme elizaldia <br>
+                            lomo seché au piment d’espelette <br>
+                            coppa basque <br>
+                            Guindillas </p>
+                            <p><strong>Fromages :</strong> <br>
+                            tomme de vache au lait cru de la fromagerie des aldudes <br>
+                            ossau-iraty fermier de la ferme ekiola <br>
+                            cremeux de brebis de la fromagerie des aldudes <br>
+                            confiture de cerise</p>
+                      </div>
+                      <div class="title_group" @click="bFrance = !bFrance">
+                          <p>Buffet Français</p>
+                          <p>15	€/pers</p>
+                      </div>
+                      <div class="content_group" v-if="bFrance">
+                          <p><strong>Amuses-bouches : </strong> <br>
+                        Biscuit sablé cantaloup <br>
+                        Navette fromage frais de brebis ciboulette et truite de la ferme du ciron fumée <br>
+                        Mini burger magret seché basque foie gras mi-cuit et confit d’oignons <br>
+                        Navette bleu d’auvergne, poire pochée et noix</p>
+                        <p><strong>Charcuteries : </strong><br>
+                        Jambon de cochon fermier 12 mois laborie <br>
+                        Saucisse seche du haut mont <br>
+                        Terrine de campagne <br>
+                        Cornichons</p>
+                        <p><strong>Fromages : </strong><br>
+                        Comte de chez vagne <br>
+                        Cantal affinage entre deux <br>
+                        Saint nectaire fermier <br>
+                        Noix du perigord </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <transition name="overlay" appear>
+            <div class="overlay" v-if="active_devis"></div>  
+          </transition>
+          <div class="devis_mobile">
+              <div class="intro" @click="active_devis = !active_devis">
+                 <p>Obtenir un devis</p> 
+                 <p class="fleche_bottom" :class="{ fleche_top : active_devis}"><svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+                                        <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
+                                    </svg></p>
+              </div>  
+              <div class="formulaire" v-if="active_devis">
+                  <form >
+                        <div class="label">
+                            <p>Nom et prénom</p>
+                            <input type="text">
+                        </div>
+                        <div class="label">
+                            <p>E-mail</p>
+                            <input type="mail">
+                        </div>
+                        <div class="label">
+                            <p>Téléphone</p>
+                            <input type="phone">
+                        </div>
+                        <div class="label">
+                            <p>Société (facultatif)</p>
+                            <input type="text">
+                        </div>
+                        <div class="label">
+                            <p>Type de prestations</p>
+                            <select >
+                                <option disabled selected value="">Buffets et Cocktails</option>
+                            </select>
+                        </div>
+                         <div class="label">
+                            <p>Nombre de convives</p>
+                            <input type="number">
+                        </div>
+                        <div class="label">
+                            <p>Lieu</p>
+                            <input type="text">
+                        </div>
+                        <div class="label">
+                            <p>Date et heure</p>
+                            <input type="text">
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" required>
+                            <p>En cochant cette case vous accepter que les informations fournies soient utilisées pour vous contacter suite à votre demande de devis.</p>
+                        </div>
+                        <div class="btn_form">
+                                <button> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+                                        <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
+                                    </svg>Soumettre votre demande</button>
+                            </div>
+                    </form>
+              </div>
+          </div>
+          <section class="others">
+              <div class="prestations">
                     <div class="items_prestations">
                         <div class="title_prestation">
-                        <h3>Nos différents <strong>prestations.</strong></h3>
+                        <h3>Nos autres <strong>prestations.</strong></h3>
                     </div>
                         <div class="items" >
                             <div class="items_img">
@@ -179,13 +295,8 @@ avant cuisson. </p>
                                 </button>
                                 </div>
                         </div>
-                
-
-
                     </div>
-                </div>
-            </div>
-             
+              </div>
           </section>
       </main>
       <newsletters/>
@@ -194,31 +305,32 @@ avant cuisson. </p>
 </template>
 
 <script>
-import theHeader from '~/components/default/theHeader'
-import newsletters from '~/components/default/newsletters'
-import theFooter from '~/components/default/theFooter'
-import heroTraiteur from '~/components/contentIndex/heroTraiteur'
-
+import theHeader from '../../components/default/theHeader'
+import theFooter from '../../components/default/theFooter'
+import newsletters from '../../components/default/newsletters'
 
 export default {
     mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
       setTimeout(() => this.$nuxt.$loading.finish(), 1200)
-    })
-  },
+        })
+    },
     components: {
         theHeader,
         newsletters,
-        theFooter,
-        heroTraiteur
+        theFooter
     },
     data() {
         return {
-            plus: true,
+            plus: false,
             plus_1: false,
             plus_2: false,
             plus_3: false,
+            active_devis: false,
+            apero: false,
+            bBasque: false,
+            bFrance: false,
         }
     }, 
     methods: {
@@ -236,15 +348,74 @@ export default {
         },
         
     },
-    transition: 'slide-bottom'
+
+
 }
 </script>
 
 <style scoped>
 
-a {
-    text-decoration: none;
+/* TRANSITION */
+
+.overlay-enter-active {
+    animation: openOverlay .3s ease-in-out
 }
+
+@keyframes openOverlay {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+.overlay-leave-active {
+    animation: closeOverlay .3s ease-in-out
+}
+
+@keyframes closeOverlay {
+    from {
+        opacity: 1; 
+    }
+    to {
+        opacity: 0;
+    }
+    
+}
+
+.devis-enter-active {
+    animation: openDevis .3s ease-in-out;
+}
+
+.intro-enter-active {
+    animation: openDevis .3s ease-in-out;
+}
+
+@keyframes openDevis {
+    from {
+       transform: translateY(300px); 
+    }
+    to {
+        transform: translateY(0); 
+
+    }
+    
+}
+
+
+
+
+
+
+/* DEFAULT  */
+
+
+a {
+    text-decoration: none; 
+}
+
 
 .color {
     fill: var(--orange)!important;
@@ -262,73 +433,298 @@ a {
 }
 
 
-.orange {
-    color: var(--orange);
+
+/* CONTENT */
+
+
+
+
+.content_prestations {
+    background-color: var(--gray);
+    padding: 90px 10px 15px 10px;
+}
+
+.img_block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.img_block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    background-color: var(--black);
+    padding: 15px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.service {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: white;
     font-weight: bold;
 }
 
-.bck {
-    background-image: url('~assets/img/jpg/traiteur.jpg'); 
-    background-size: cover; 
-    height: 500px;
-    background-repeat: no-repeat; 
+.service img {
+    width: 30px;
+    margin-right: 10px;
 }
 
-.title_traiteur {
-    padding: 20px 15px 5px 15px;
+.details {
+    background-color: var(--black);
+    margin-top: -1px;
+    padding: 15px 10px;
 }
 
-.title_before p {
-  font-family: bebas-neue-pro, sans-serif; 
-  color: var(--orange);
-  font-size: 14px; 
-  text-transform: uppercase; 
-  font-weight: bold; 
-  letter-spacing: 1.2px; 
-  margin-bottom: 10px;
+.details_group {
+    display: flex; 
+    margin-top: 10px; 
+    font-size: 18px;
+    color: white; 
+    justify-content: space-between;
+    align-items: center; 
 }
 
-.title h1{
-  font-family: bebas-neue-pro, sans-serif; 
-  color: var(--black);
-  font-weight: lighter;
-  font-size: 38px; 
-  text-transform: uppercase; 
-  line-height: 42px; 
-  margin-bottom: 10px;
+.details_group h3 {
+    color: white; 
+    font-size: 24px;
+    font-weight: lighter;
 }
 
-.hr_title {
-  border: none; 
-  width: 30px;
-  height: 2px;
-  background-color: var(--orange);
-}
-
-.content_traiteur {
-    padding: 0 15px; 
-}
-
-.content_traiteur p{
+.title_group {
+    display: flex; 
     margin-top: 10px;
-    font-size: 16px; 
-    color: var(--black);
-    line-height: 24px;
+    font-weight: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    color: var(--orange);
+    font-weight: bold; 
 }
+
+.content_group {
+    margin-top: 5px;
+    color: white;
+}
+
+.content_group p {
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.devis_mobile {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 20;
+    overflow: scroll;
+}
+
+.intro {
+    background-color: var(--orange);
+    padding: 15px 20px;
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.fleche_bottom {
+    transform: rotate(-90deg);
+    transition: .6s all; 
+}
+
+.fleche_top{
+    transform: rotate(90deg);
+}
+
+.intro p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--orange);
+}
+
+.title_block_content h2 {
+    font-family: bebas-neue-pro, sans-serif; 
+    font-size: 36px;
+    font-weight: bold; 
+    margin-top: 20px;
+    color: var(--orange);
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+
+.title_block_content p {
+    color: var(--black);
+    line-height: 22px;
+    text-align: center;
+}
+
+
+/* FORMMMMMMM */
+.overlay {
+    position: absolute;
+    bottom: 0; 
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+form {
+    overflow: scroll;
+    padding: 15px 20px;
+    height: 52vh;
+    background-color: var(--gray);
+    z-index: 20;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.label p {
+    padding: 10px 0 5px 5px;
+    font-size: 14px; 
+    font-weight: bold;
+    color: var(--black);
+}
+
+.label input {
+    width: 100%; 
+    border: none; 
+    background-color: white; 
+    padding: 10px 16px; 
+    font-size: 16px; 
+    outline: none; 
+    border-radius: 0px;
+    -webkit-appearance: none;
+}
+
+.title_form_two h4 {
+    font-family: bebas-neue-pro, sans-serif; 
+    color: var(--orange);
+    font-weight: lighter;
+    font-size: 28px; 
+    margin-top: 50px;
+    text-transform: uppercase; 
+    line-height: 28px; 
+    margin-bottom: 10px;
+}
+
+select {
+     width: 100%; 
+    border: none; 
+    border-radius: 0px;
+    background-color: var(--black); 
+    margin-top: -1px;
+    -webkit-appearance: none;
+    font-family: bebas-neue-pro, sans-serif; 
+    outline: none; 
+    font-size: 16px;
+    padding: 10px 16px; 
+    color: white;
+    font-weight: bold;
+}
+
+.check {
+    display: flex; 
+    margin-top: 20px;
+}
+
+.check input {
+    margin-right: 10px;
+}
+
+.check p {
+    margin-top: -2px;
+    font-size: 12px; 
+    font-weight: bold; 
+}
+
+input[type="checkbox" i] {
+    background-color: var(--black)!important;
+    width: 30px; 
+    height: 20px;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    outline: none; 
+    transition: all .3s; 
+
+}
+
+input[type="checkbox" i]:checked {
+    background-color: var(--orange)!important;
+    width: 30px; 
+    height: 20px;
+    -webkit-appearance: none;
+    display: flex; 
+    transition: all .3s; 
+
+}
+
+input[type="checkbox" i]:checked::after {
+    content: 'x';
+    font-size: 16px;
+    color: white; 
+    font-weight: bold;
+    display: flex; 
+    margin: auto;
+}
+
+.btn_form button {
+    margin: 20px auto; 
+    padding: 8px 16px; 
+    width: 100%;
+    font-family: bebas-neue-pro, sans-serif; 
+    background-color: var(--orange);
+    border: none; 
+    box-shadow: 4px 4px rgba(218, 71, 9, 0.486);
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    cursor: pointer; 
+    outline: none; 
+
+}
+
+.btn_form button:hover {
+    transform: translate(3px, 3Px);
+}
+
+.btn_form button svg {
+    margin-right: 10px;
+}
+
+
+
+
+/* AUTRE PRESTATIONS */
+
 
 .title_prestation h3 {
     font-family: bebas-neue-pro, sans-serif; 
     font-size: 28px;
     font-weight: lighter; 
     margin-top: 20px;
-    color: var(--orange);
+    color: var(--black);
     text-transform: uppercase; 
-}
-
-.items_prestations {
-    background-color: var(--gray);
-    margin-top: 20px;
-    padding: 10px 15px 10px 15px;
+    text-align: center;
 }
 
 .items {
@@ -465,10 +861,5 @@ display: flex;
     margin-right: 10px;
     fill: var(--orange);
 }
-
-
-
-
-
 
 </style>

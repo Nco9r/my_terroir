@@ -87,16 +87,17 @@ footer {
     font-family: bebas-neue-pro, sans-serif; 
     color: var(--orange); 
     text-transform: uppercase; 
-    font-size: 24px;
-    margin-bottom: 8px; 
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px; 
 }
 
 .items p {
-    color: rgba(255, 255, 255, 0.74); 
-    font-size: 20px;
-    font-weight: bold; 
-    margin-bottom: 8px;
-    font-family: bebas-neue-pro, sans-serif; 
+    color: rgba(255, 255, 255, 0.904); 
+    font-size: 16px;
+    font-weight: lighter; 
+    margin-bottom: 3px;
+    font-family: bebas-neue-pro-expanded, sans-serif; 
 }
 
 .items img {

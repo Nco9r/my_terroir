@@ -69,10 +69,10 @@
               </div>
               <div class="content_menu_text">
                 <nuxt-link to='/'>Notre histoire</nuxt-link>
-                <nuxt-link to='traiteur-particuliers'>Le Traiteur</nuxt-link>
-                <nuxt-link to='producteurs'>Les Producteurs</nuxt-link>
-                <nuxt-link to='boutique'>La Boutique</nuxt-link>
-                <nuxt-link to='blog'>Le Blog</nuxt-link>
+                <nuxt-link to='/traiteur-particuliers'>Le Traiteur</nuxt-link>
+                <nuxt-link to='/producteurs'>Les Producteurs</nuxt-link>
+                <nuxt-link to='/boutique'>La Boutique</nuxt-link>
+                <nuxt-link to='/blog'>Le Blog</nuxt-link>
                 <div class="sociaux">
                     <div class="title_sociaux">
                         <p><strong>Suivez</strong> nous</p>
@@ -102,7 +102,7 @@
               </div>
           </div>
           <div class="btn_menu">
-              <nuxt-link to='contact-devis'><button> <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+              <nuxt-link to='/contact-devis'><button> <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
                 <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
                 </svg>Contact et devis</button></nuxt-link>
           </div>
@@ -253,13 +253,15 @@ header {
     align-items: center;
 }
 
-.top_bar_icon .search {
+.top_bar_icon .search_mobile {
     margin-right: 10px;
+    display: none;
 }
 
 .top_bar_icon .cart {
-    margin-right: 18px;
+    margin-right: 15px;
     display: flex; 
+    margin-top: -2px;
     flex-flow: row;
     justify-content: flex-start;
     align-items: flex-start;
