@@ -215,7 +215,7 @@ export default {
     },
     data() {
         return {
-            plus: true,
+            plus: false,
             plus_1: false,
             plus_2: false,
             plus_3: false,

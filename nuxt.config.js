@@ -1,7 +1,7 @@
 
 module.exports = {
   mode: 'universal',
-  target: 'static',
+  target: 'serverheroku logs --tail',
   /*
   ** Headers of the page
   */

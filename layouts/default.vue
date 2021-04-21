@@ -37,7 +37,7 @@ html {
   --orange: #E34B1B;
   --orange-light: rgb(255, 237, 230);
   --black: #202020; 
-  --gray: #F7F7F7; 
+  --gray: rgb(243, 243, 243); 
   --hint: #AAAAAA;
 }
 

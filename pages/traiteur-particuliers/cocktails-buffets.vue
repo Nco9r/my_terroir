@@ -4,13 +4,22 @@
       <main class="content_prestations">
           <div class="block_right">
               <div class="title_block_content">
-                  <h2>Cocktails et buffets</h2>
+                  <h2>Cocktails et buffets <img src="@/assets/img/svg/service.svg" alt=""><div class="items_price_title">
+                                <p>à partir de <br> 8€/pers</p>
+                            </div></h2>
                   <p>Des prestations en toute simplicité qui épateront tous vos invités par la qualité des
                                     produits utilisés et l’ambiance chaleureuse qui en ressort.</p>
+              </div>
+              <div class="title_img">
+                  <p>En image</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
+                                        <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
+                                    </svg>
               </div>
               <div class="img_block">
                   <img src="@/assets/img/jpg/cocktails.jpg" alt="">
               </div>
+              <hr>
               <!-- <div class="info">
                   <div class="service">
                       <img src="@/assets/img/svg/service.svg" alt="">
@@ -21,22 +30,30 @@
                       <p>Location de matériel disponible</p>
                   </div>
               </div> -->
+              <div class="title_img">
+                  <p>Contenu de la prestation</p>
+              </div>
               <div class="details">
                   <div class="details_group">
                       <h3>Buffets <strong>déposés</strong></h3>
-                      <p>+</p>
                   </div>
                   <div class="group">
                       <div class="title_group" @click="apero = !apero">
                           <p>L'apéro</p>
-                          <p>8€/pers</p>
+                         <div class="price_content">
+                              <p>8€/pers </p>
+                              <p class="plus" :class="{ plus_open : apero}">+</p>
+                          </div>
                       </div>
                       <div class="content_group" v-if="apero">
                           <p>Assortiment de charcuteries artisanales et fromages affinés du moment</p>
                       </div>
                       <div class="title_group" @click="bBasque = !bBasque">
                           <p>Buffet Basque</p>
-                          <p>15	€/pers</p>
+                          <div class="price_content">
+                              <p>15	€/pers </p>
+                              <p class="plus" :class="{ plus_open : bBasque}">+</p>
+                          </div>
                       </div>
                       <div class="content_group" v-if="bBasque">
                           <p><strong>Amuses bouches :</strong> <br>
@@ -56,7 +73,10 @@
                       </div>
                       <div class="title_group" @click="bFrance = !bFrance">
                           <p>Buffet Français</p>
-                          <p>15	€/pers</p>
+                          <div class="price_content">
+                              <p>15	€/pers </p>
+                              <p class="plus" :class="{ plus_open : bFrance}">+</p>
+                          </div>
                       </div>
                       <div class="content_group" v-if="bFrance">
                           <p><strong>Amuses-bouches : </strong> <br>
@@ -76,8 +96,74 @@
                         Noix du perigord </p>
                       </div>
                   </div>
+                   <div class="details_group">
+                      <h3>Coktails <strong>avec service</strong></h3>
+                  </div>
+                  <div class="group">
+                      <div class="title_group" @click="cBasque = !cBasque">
+                          <p>Cocktails Basque</p>
+                          <div class="price_content">
+                              <p>25	€/pers </p>
+                              <p class="plus" :class="{ plus_open : cBasque}">+</p>
+                          </div>
+                      </div>
+                      <div class="content_group" v-if="cBasque">
+                          <p><strong>Amuses bouches :</strong> <br>
+                          tartelette de boudin au piment d’espelette et confits d’oignons <br>
+                            tortilla au chorizo <br>
+                            pintxo piperade et txistorra <br>
+                            pintxo de filet de thon et poivrons grillees <br>
+                            Cassolette d’axoa de veau <br>
+                            Cassolette de txistora deglacée au vinaigre de cidre et pommes de terre <br>
+                            Cabillaud en croute de chorizo </p>
+                            <p><strong>Charcuteries :</strong> <br> 
+                            jambon de bayonne de la ferme elizaldia <br>
+                            lomo seché au piment d’espelette <br>
+                            coppa basque <br>
+                            Guindillas </p>
+                            <p><strong>Fromages :</strong> <br>
+                            tomme de vache au lait cru de la fromagerie des aldudes <br>
+                            ossau-iraty fermier de la ferme ekiola <br>
+                            cremeux de brebis de la fromagerie des aldudes <br>
+                            confiture de cerise </p>
+                            <p><strong>Desserts :</strong> <br>
+                            Mini gâteau basque <br>
+                            Mini flans basque (koka)  </p>
+                      </div>
+                      <div class="title_group" @click="cFrance = !cFrance">
+                          <p>Cocktails Français</p>
+                          <div class="price_content">
+                              <p>25	€/pers </p>
+                              <p class="plus" :class="{ plus_open : cFrance}">+</p>
+                          </div>
+                      </div>
+                      <div class="content_group" v-if="cFrance">
+                          <p><strong>Amuses-bouches : </strong> <br>
+                        Biscuit sablé cantaloup <br>
+                        Navette fromage frais de brebis ciboulette et truite de la ferme du ciron fumée <br>
+                        Mini burger magret seché basque foie gras mi-cuit et confit d’oignons <br>
+                        Navette bleu d’auvergne, poire pochée et noix <br>
+                        Crémeux de vache roti et ventreche grillée <br>
+                        Croque monsieur à la truffe <br>
+                        Parmentier de canard gratiné</p>
+                        <p><strong>Charcuteries : </strong><br>
+                        Jambon de cochon fermier 12 mois laborie <br>
+                        Saucisse seche du haut mont <br>
+                        Terrine de campagne <br>
+                        Cornichons </p>
+                        <p><strong>Fromages : </strong><br>
+                        Comte de chez vagne <br>
+                        Cantal affinage entre deux <br>
+                        Saint nectaire fermier <br>
+                        Noix du perigord </p>
+                        <p><strong>Desserts : </strong><br>
+                        Cannelés <br>
+                        Moelleux au chocolat </p>
+                      </div>
+                  </div>
               </div>
           </div>
+          <hr>
           <transition name="overlay" appear>
             <div class="overlay" v-if="active_devis"></div>  
           </transition>
@@ -328,9 +414,11 @@ export default {
             plus_2: false,
             plus_3: false,
             active_devis: false,
-            apero: false,
+            apero: true,
             bBasque: false,
             bFrance: false,
+            cBasque: false,
+            cFrance: false,
         }
     }, 
     methods: {
@@ -432,6 +520,24 @@ a {
     color: var(--orange)!important;
 }
 
+.plus {
+    font-size: 24px;
+    color: var(--orange);
+    margin-top: 2px;
+    margin-left: 5px;
+    transition: all .4s ease-in-out;
+}
+
+
+
+.plus_open {
+    font-size: 24px;
+    color: white;
+    transform: rotate(45deg)!important;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
 
 
 /* CONTENT */
@@ -445,7 +551,7 @@ a {
 }
 
 .img_block {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -453,6 +559,26 @@ a {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.title_img {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title_img p {
+    font-weight: bold; 
+    font-size: 14px;
+}
+
+.title_img svg {
+    width: 20px;
+}
+
+.title_img  path {
+    fill: var(--black);
 }
 
 .info {
@@ -482,6 +608,8 @@ a {
     background-color: var(--black);
     margin-top: -1px;
     padding: 15px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .details_group {
@@ -501,7 +629,7 @@ a {
 
 .title_group {
     display: flex; 
-    margin-top: 10px;
+    margin-top: 1px;
     font-weight: 20px;
     justify-content: space-between; 
     align-items: center;
@@ -556,19 +684,26 @@ a {
 
 .title_block_content h2 {
     font-family: bebas-neue-pro, sans-serif; 
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold; 
     margin-top: 20px;
+    margin-bottom: 10px;
     color: var(--orange);
     text-transform: uppercase; 
-    text-align: center;
+    text-align: left;
 }
 
 
 .title_block_content p {
     color: var(--black);
     line-height: 22px;
-    text-align: center;
+    text-align: left;
+}
+
+.price_content {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
 }
 
 
@@ -724,7 +859,7 @@ input[type="checkbox" i]:checked::after {
     margin-top: 20px;
     color: var(--black);
     text-transform: uppercase; 
-    text-align: center;
+    text-align: left;
 }
 
 .items {
@@ -736,6 +871,18 @@ input[type="checkbox" i]:checked::after {
     position: relative;
 }
 
+.items_price_title {
+    position: absolute; 
+    right: 20px;
+    top: 80px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: flex; 
+    z-index: 0;
+}
+
 .items_price {
     position: absolute; 
     right: 50px;
@@ -745,6 +892,19 @@ input[type="checkbox" i]:checked::after {
     background-color: var(--orange);
     border-radius: 50%;
     display: flex; 
+}
+
+.items_price_title p{
+    font-size: 14px; 
+    font-weight: bold; 
+    color: white;
+    display: flex; 
+    margin: auto; 
+    text-transform: lowercase;
+    text-align: center; 
+    line-height: 16px;
+    transform: rotate(20deg);
+
 }
 
 .items_price p{
