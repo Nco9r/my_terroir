@@ -89,7 +89,7 @@ export default {
             e.preventDefault();
             const formData = {...this.form}
             try{
-                const {data, status} = await axios.post('/api/subscribe', formData)
+                const {data, status} = await axios.post('/api/newsletter/subscribe', formData)
                 this.validate = true,
                 this.form = ''
             }catch(e){

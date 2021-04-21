@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 module.exports = {
   mode: 'universal',
   target: 'serverheroku logs --tail',
@@ -30,6 +30,7 @@ module.exports = {
 
   serverMiddleware: [
     { path: '/api/index', handler: '~/api/index' },
+    { path: '/api/newsletter', handler: '~/api/newsletter' },
   ],
   /*
   ** Plugins to load before mounting the App
