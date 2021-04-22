@@ -31,9 +31,13 @@ export default {
 
 <style scoped>
 
+.clients {
+  background-color: #fff;
+}
+
 .storie_title {
     text-align: center; 
-    margin: 40px 0 60px 0; 
+    padding: 40px 0 60px 0; 
 }
 
 .title_before p {
@@ -72,7 +76,7 @@ export default {
    padding: 0 50px;
    align-items: center;
    justify-content: center;
-   margin-bottom: 70px;
+   padding-bottom: 70px;
 }
 .grid_logo img {
     width: 100px;

@@ -29,6 +29,7 @@ export default {
 
 .logo {
   padding: 20px 20px;
+  margin-top: 100vh;
   display: flex; 
   background-color: var(--gray);
   flex-flow: row nowrap; 

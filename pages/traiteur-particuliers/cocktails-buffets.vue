@@ -175,18 +175,18 @@
                                     </svg></p>
               </div>  
               <div class="formulaire" v-if="active_devis">
-                  <form >
+                  <form @submit="submitP">
                         <div class="label">
                             <p>Nom et prénom</p>
-                            <input type="text">
+                            <input type="text" v-model="form.mail">
                         </div>
                         <div class="label">
                             <p>E-mail</p>
-                            <input type="mail">
+                            <input type="mail" v-model="form.email">
                         </div>
                         <div class="label">
                             <p>Téléphone</p>
-                            <input type="phone">
+                            <input type="phone" v-model="form.phone">
                         </div>
                         <div class="label">
                             <p>Société (facultatif)</p>
@@ -194,21 +194,21 @@
                         </div>
                         <div class="label">
                             <p>Type de prestations</p>
-                            <select >
+                            <select v-model="form.prestation">
                                 <option disabled selected value="">Buffets et Cocktails</option>
                             </select>
                         </div>
                          <div class="label">
                             <p>Nombre de convives</p>
-                            <input type="number">
+                            <input type="number" v-model="form.convives">
                         </div>
                         <div class="label">
                             <p>Lieu</p>
-                            <input type="text">
+                            <input type="text" v-model="form.lieu">
                         </div>
                         <div class="label">
                             <p>Date et heure</p>
-                            <input type="text">
+                            <input type="text" v-model="form.date">
                         </div>
                         <div class="check">
                             <input type="checkbox" required>
@@ -409,6 +409,15 @@ export default {
     },
     data() {
         return {
+            form : {
+                name: '',
+                phone:'',
+                email : '',
+                prestation: '',
+                lieu : '',
+                date : '',
+                convives : '',
+            },
             plus: false,
             plus_1: false,
             plus_2: false,
@@ -433,6 +442,15 @@ export default {
         },
          openContent_3() {
             this.plus_3 = !this.plus_3
+        },
+         submitP(e) {
+            e.preventDefault();
+            console.log({...this.form})
+            this.$axios.post('https://nco9r.herokuapp.com/api/devis-mt', {...this.form})
+            .then(res => (
+                this.form = ''
+            ))
+            .catch(e)
         },
         
     },

@@ -39,6 +39,12 @@ export default {
   flex-flow: row wrap; 
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .ronds {

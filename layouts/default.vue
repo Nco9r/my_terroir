@@ -21,8 +21,14 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
-  
+  overflow-x: hidden;
   z-index: auto;
+}
+
+body {
+  overflow-x: hidden;
+  /* background-color: rgb(255, 255, 255); */
+
 }
 
 

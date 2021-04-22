@@ -89,7 +89,7 @@ export default {
             e.preventDefault();
             const formData = {...this.form}
             try{
-                const {data, status} = await axios.post('https://nco9r.herokuapp.com/api/subscribe', formData)
+                const {data, status} = await axios.post('http://ikcl8058.odns.fr/app/api/newsletter/subscribe', formData)
                 this.validate = true,
                 this.form = ''
             }catch(e){

@@ -1,10 +1,12 @@
 <template>
   <footer class="footer">
-      <div class="logo_items">
+      
+        <div class="items_footer">
+             <div class="logo_items">
           <div class="items">
               <img src="@/assets/img/svg/logo.svg" alt="">
             </div>
-        <div class="items_footer">
+         </div>
           <div class="items">
               <h4>plan du site</h4>
               <p>Notre Histoire</p>
@@ -53,8 +55,7 @@
                         </div>
             </div>        
       </div>
-      </div>
-      
+      <div class="bas_page">
       <div class="icon_paiement">
           <img src="@/assets/img/svg/visa.svg" alt="">
           <img src="@/assets/img/svg/mc.svg" alt="">
@@ -64,6 +65,7 @@
       <div class="copyright">
           <p>© <strong>{{new Date().getFullYear()}}</strong> My-Terroir tous droits réservés - 
 Design et développement :<strong> Nicolas ROUX</strong></p>
+      </div>
       </div>
   </footer>
 </template>
@@ -156,6 +158,51 @@ footer {
          width: 20%;;
      }
  }
+
+  @media screen and (min-width: 1024px) {
+     footer {
+        display: flex; 
+        padding: 0 50px 0 50Px;
+        flex-flow: column;
+     }
+
+     .items_footer {
+         display: flex; 
+        flex-flow: row wrap;
+     }
+
+     .logo_items {
+         display: flex; 
+         flex-flow: row ;
+         justify-content: space-between;
+     }
+
+     .items {
+         text-align: left;
+         width: 210px;
+
+     }
+
+     .items_logo {
+         width: 20%;;
+     }
+
+     .bas_page {
+         display: flex; 
+         flex-flow: row; 
+         justify-content: flex-start;
+         align-items: flex-end;
+         padding: 0px 20px 20px 20px;
+     }
+
+     .copyright p {
+         padding-bottom: 0;
+    }
+
+    .icon_sociaux {
+        text-align: left; 
+    }
+}
 
 
 </style>
