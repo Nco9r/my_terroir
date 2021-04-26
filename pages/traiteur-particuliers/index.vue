@@ -466,6 +466,24 @@ display: flex;
     fill: var(--orange);
 }
 
+@media screen and (min-width: 1024px) {
+    .items_prestations {
+        display: flex; 
+        flex-flow: row wrap; 
+        justify-content: space-around; 
+        align-items: flex-start;
+    }
+
+    .items {
+        width: 34%;
+    }
+
+    .title_prestation {
+        display: none;
+    }
+    
+}
+
 
 
 

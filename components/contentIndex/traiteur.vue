@@ -43,8 +43,9 @@ export default {
 
 .storie {
   display: flex; 
-  margin-top: 0px;
+  margin-top: 120px;
   background-color: #fff;
+
 }
 
 .storie_img {

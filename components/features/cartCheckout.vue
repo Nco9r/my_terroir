@@ -93,7 +93,6 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
     z-index: 100;
     padding: 0 15px;
 }
@@ -114,7 +113,7 @@ export default {
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    background-color: var(--gray);
+    background-color:white;
     padding: 8px 10px;
     margin-top: 30px;
 }
@@ -158,14 +157,12 @@ export default {
     position: absolute; 
     left: 0;
     right: 0;
-    background-color: var(--gray);
 }
 
 .table_bottom {
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    background-color: white;
     margin: 0 15px;
     padding: 8px 10px;
     margin-top: 30px;

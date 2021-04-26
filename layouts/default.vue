@@ -27,7 +27,9 @@ html {
 
 body {
   overflow-x: hidden;
-  /* background-color: rgb(255, 255, 255); */
+  background-image: url('~assets/img/jpg/paper.jpeg');
+  background-size: 300px 300px;
+    background-repeat: repeat;
 
 }
 
@@ -41,7 +43,7 @@ body {
 
 :root {
   --orange: #E34B1B;
-  --orange-light: rgb(255, 237, 230);
+  --orange-light: rgb(253, 247, 245);
   --black: #202020; 
   --gray: rgb(243, 243, 243); 
   --hint: #AAAAAA;

@@ -3,9 +3,6 @@
       
         <div class="items_footer">
              <div class="logo_items">
-          <div class="items">
-              <img src="@/assets/img/svg/logo.svg" alt="">
-            </div>
          </div>
           <div class="items">
               <h4>plan du site</h4>
@@ -171,20 +168,19 @@ footer {
         flex-flow: row wrap;
      }
 
-     .logo_items {
-         display: flex; 
-         flex-flow: row ;
-         justify-content: space-between;
-     }
 
      .items {
          text-align: left;
          width: 210px;
+     }
 
+     .items img {
+         display: none;
      }
 
      .items_logo {
          width: 20%;;
+         display: none;
      }
 
      .bas_page {

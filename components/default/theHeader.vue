@@ -575,10 +575,10 @@ header {
 
     .menu_header_desktop a{
     color: white;
-    font-family: bebas-neue-pro, sans-serif; 
+    font-family: bebas-neue-pro-expanded, sans-serif; 
     font-weight: 800;
-    font-size: 20px;
-    margin-right: 20px;
+    font-size: 16px;
+    margin-right: 25px;
     margin-bottom: 15px;
     text-decoration: none;
     opacity: 0;

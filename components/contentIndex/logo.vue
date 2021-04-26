@@ -29,7 +29,6 @@ export default {
 
 .logo {
   padding: 20px 20px;
-  margin-top: 100vh;
   display: flex; 
   background-color: var(--gray);
   flex-flow: row nowrap; 
@@ -61,13 +60,24 @@ export default {
 
 @keyframes slide {
   0% {
-    transform: translateX(0)
+    transform: translate3d(0)
   }
   50% {
-    transform: translateX(100%)
+    transform: translate3d(100%)
   }
   100% {
-    transform: translateX(0)
+    transform: translate3d(0)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo {
+    padding: 100px 50px;
+    display: none; 
+    background-color: white;
+    flex-flow: row nowrap; 
+    justify-content: center;
+    overflow-x: scroll;
   }
 }
 

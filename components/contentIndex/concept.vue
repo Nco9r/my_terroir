@@ -51,7 +51,6 @@ export default {
 
 .concept {
     background-color: var(--gray);
-    background-image: url('~assets/img/jpg/texture.png'); 
     background-size: 100%;
 }
 

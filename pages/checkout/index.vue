@@ -147,7 +147,7 @@ export default {
 .label input {
     width: 100%; 
     border: none; 
-    background-color: var(--gray); 
+    background-color: white; 
     padding: 10px 16px; 
     font-size: 16px; 
     outline: none; 

@@ -143,7 +143,7 @@ export default {
 
   .block_storie {
     display: flex; 
-    margin: 0 100px;
+    margin: 120px 100px;
     align-items: center;
   }
   .storie_img {
@@ -154,7 +154,6 @@ export default {
   object-fit: cover;
   width: 500px; 
   height: 500px;
-  border-radius: 10px;
 }
 
   .storie_content {

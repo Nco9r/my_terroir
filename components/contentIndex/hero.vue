@@ -5,10 +5,10 @@
         </div>
         <div class="hero_content">
           <div class="title">
-            <h1>Produits <br><strong>de terroir.</strong></h1>
+            <h1>Produits <strong>de terroir.</strong></h1>
           </div>
           <div class="content">
-            <p>Spécialiste en produits de terroir pour toutes les occasions : Traiteur, Épicerie et Livraison des particuliers et professionnels de la restauration. </p>
+            <p>Nous sommes spécialisé dans la sélection et la livraison à domicile de produits de terroirs, fromages et charcuteries de qualités. Tous nos produits sont choisis minutieusement auprès d’artisans. </p>
           </div>
           <div class="btn_hero">
               <button> <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
@@ -39,12 +39,6 @@ export default {
   flex-flow: row wrap; 
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
 }
 
 .ronds {
@@ -76,7 +70,7 @@ export default {
 }
 
 .hero_content {
-  padding: 0 15px; 
+  padding: 0 25px; 
 }
 
 .hero_content .title h1 {
@@ -135,11 +129,11 @@ export default {
   .hero {
     display: flex; 
     flex-flow: row-reverse;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
   }
   .hero_img img{
-    width: 80%;
+    width: 90%;
     margin-right: 300px;
   }
 
@@ -153,7 +147,7 @@ export default {
     text-transform: uppercase; 
     color: white; 
     text-align: left;
-    font-size: 120px;
+    font-size: 110px;
     font-weight: lighter;
     margin-top: 100px;
     line-height: 110px;
@@ -165,9 +159,9 @@ export default {
     padding: 0 20px 0 0;
     width: 480px;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 30px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 500;
 
   }
 
