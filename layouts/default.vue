@@ -26,10 +26,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  background-image: url('~assets/img/jpg/paper.jpeg');
-  background-size: 300px 300px;
-    background-repeat: repeat;
+  background-color: var(--orange-light);
 
 }
 
@@ -43,7 +40,7 @@ body {
 
 :root {
   --orange: #E34B1B;
-  --orange-light: rgb(253, 247, 245);
+  --orange-light: #fffaf8;
   --black: #202020; 
   --gray: rgb(243, 243, 243); 
   --hint: #AAAAAA;

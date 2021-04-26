@@ -14,9 +14,16 @@
             <div class="content_text">
               <p>Notre secret : de bons produits achetés directement au <strong>producteur</strong>, une équipe passionnée, motivée et quelques bons livres de grand-mères.  Bon on avoue : il nous aura fallu 5 ans, beaucoup de travail, de nombreux voyages et autant de rencontres pour pouvoir vous proposer en toute humilité notre expertise en la matière. Pourquoi chercher compliqué quand nous pouvons vous régaler en toute simplicité!</p>
             </div>
+            <button class="button_text">Notre histoire</button>
           </div>
+
            <div class="storie_img">
-            <img class="img_products" src="@/assets/img/jpg/terroir.jpg" alt="">
+             <div class="block_img">
+             <img class="img_products" src="@/assets/img/jpg/verrine.jpg" alt="">
+             <img class="img_products" src="@/assets/img/jpg/verrine_1.jpg" alt="">
+             <img class="img_products" src="@/assets/img/jpg/verrine.jpg" alt="">
+             <img class="img_products" src="@/assets/img/jpg/verrine.jpg" alt="">
+             </div>
           </div>
         </div>
       </section>
@@ -47,15 +54,26 @@ export default {
   flex-flow: column; 
 }
 
+.block_img {
+  display: flex; 
+  flex-flow: row nowrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  overflow-x: scroll;
+}
+
 .storie_img {
   display: flex;
   padding: 0 15px;
   margin-bottom: 50px;
+  
 }
 
-.storie_img_2 img{
-  margin-left: 110px;
-  margin-top: -230px;
+.button_text {
+  color: var(--orange);
+  background-color:transparent;
+  font-weight: bold;
+  border:  none;
 }
 
 .storie_img img {
@@ -64,12 +82,7 @@ export default {
   display: flex; 
   margin: auto;
   height: 400px;
-}
-
-
-.storie_img img:nth-child(2) {
-  margin-top: 140px;
-  margin-left: -230px;
+  margin-right: 20px;
 }
 
 .storie_content {

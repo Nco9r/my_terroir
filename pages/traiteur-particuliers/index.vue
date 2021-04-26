@@ -326,18 +326,18 @@ a {
 }
 
 .items_prestations {
-    background-color: var(--gray);
+    background-color: var(--orange-light);
     margin-top: 20px;
     padding: 10px 15px 10px 15px;
 }
 
 .items {
     padding: 20Px 15px 20px 15px;
-    background-color: #fff;
-    border-radius: 5Px;
     margin-top: 20px;
     margin-bottom: 30px;
     position: relative;
+    border-right: 1px solid var(--black);
+    border-left: 1px solid var(--black);
 }
 
 .items_price {
@@ -426,7 +426,7 @@ hr {
     height: 1px;
     width: 100%;
     background-color: var(--black);
-    opacity: .1;
+    
 }
 
 .btn_hero {
@@ -442,8 +442,8 @@ display: flex;
     border: none; 
     display: flex; 
     justify-content: space-around;
-    background-color: white;
     text-decoration: none;
+    background-color: transparent;
     color: var(--orange);
     font-size: 16px;
     font-weight: bold; 

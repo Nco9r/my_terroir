@@ -3,9 +3,16 @@
       <the-header/>
       <main>
         <section class="boutique_hero">
-            <hero-boutique/>
+            <div class="title_boutique">
+                <h2>Notre <strong> boutique</strong></h2>
+            </div>
+            <div class="filter">
+                <p><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 16 13">
+        <path d="M4 2.5V0H3v2.5H0v1h3V6h1V3.5h12v-1H4zM13 7h-1v2.5H0v1h12V13h1v-2.5h3v-1h-3V7z"></path>
+      </svg> filtres (0)</p>
+            </div>
         </section>
-        <section class="query">
+        <!-- <section class="query">
             <div class="title_query">
                 <h3>Tous nos <strong>produits.</strong>
                 </h3>
@@ -16,7 +23,7 @@
             </div>
             <categorie/>
             <hr class="hr">
-        </section>
+        </section> -->
         <section class="month">
             <div class="title_products">
                 <h3>Produits <strong>du mois</strong></h3>
@@ -170,8 +177,8 @@
 import theHeader from '~/components/default/theHeader'
 import newsletters from '~/components/default/newsletters'
 import theFooter from '~/components/default/theFooter'
-import categorie from '~/components/default/categorie'
-import heroBoutique from '~/components/contentIndex/heroBoutique'
+// import categorie from '~/components/default/categorie'
+// import heroBoutique from '~/components/contentIndex/heroBoutique'
 import { mapMutations } from 'vuex';
 import { mapState } from 'vuex';
 
@@ -187,9 +194,9 @@ export default {
     components: {
         theHeader,
         newsletters,
-        heroBoutique,
+        // heroBoutique,
         theFooter,
-        categorie
+        // categorie
     },
     computed: {
     productsMonth() {
@@ -258,6 +265,18 @@ export default {
     background-color: var(--gray);
 }
 
+.title_boutique h2{
+    padding: 100px 0 30px 0;
+    display: flex; 
+    font-weight: lighter;
+    font-size: 52px;
+    justify-content: center;
+}
+
+.filter p svg {
+    width: 15px;
+}
+
 .title_products {
     display: flex; 
     justify-content: space-between;
@@ -285,11 +304,15 @@ export default {
 }
 
 .items_products {
-    width: 290px; 
-    background-color: white;
-    box-shadow: 5px 5px 5px 2px rgb(233, 233, 233);
+    width: 250px; 
+    background-color: var(--orange-light);
+    /* box-shadow: 0 0 10px rgb(0 0 0 / 20%); */
+    border-right: 1px solid var(--black);
+    border-left: 1px solid var(--black);
     margin-left: 15px;
     margin-right: 15px;
+    margin-top: 20px;
+    border-radius: 0px;
     padding: 15px;
     margin-bottom: 40px;
 }
@@ -355,7 +378,6 @@ margin-top: 20px;
 .cart_number p {
     font-size: 24px;
     color: var(--black)
-
 }
 
 .price p {
@@ -374,7 +396,11 @@ margin-top: 20px;
     top: 0;
 }
 hr {
-    opacity: .3;
+
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
     margin-top: 5px;
     margin-bottom: 5px;
 }

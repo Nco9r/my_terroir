@@ -240,9 +240,7 @@ header {
 }
 
 .top_bar_color {
-      background-image: url('~assets/img/jpg/paper.jpeg');
-  background-size: 300px 300px;
-    background-repeat: repeat;
+     background-color: var(--orange-light);
     border-bottom: 1px solid var(--black); 
     transform-origin: 12%;
 }

@@ -148,7 +148,7 @@ export default {
 
 .input input {
     border: none;
-    background-color: white;
+    background-color: var(--orange-light);
     font-family: bebas-neue-pro, sans-serif; 
     font-weight: bold;
     color: var(--hint);
