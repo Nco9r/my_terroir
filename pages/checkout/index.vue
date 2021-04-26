@@ -183,7 +183,7 @@ export default {
 }
 
 .livraison p:nth-child(2) {
-    background-color: var(--gray);
+    background-color:white;
     padding: 12px 0Px;
     color: var(--orange); 
     width: 130px;

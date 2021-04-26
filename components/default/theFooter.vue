@@ -87,7 +87,7 @@ footer {
     color: var(--orange); 
     text-transform: uppercase; 
     font-size: 20px;
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 10px; 
 }
 

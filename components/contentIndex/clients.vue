@@ -31,9 +31,7 @@ export default {
 
 <style scoped>
 
-.clients {
-  background-color: #fff;
-}
+
 
 .storie_title {
     text-align: center; 

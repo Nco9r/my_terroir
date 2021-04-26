@@ -1,13 +1,6 @@
 <template>
      <section class="storie">
         <div class="block_storie">
-          <div class="storie_img">
-            <img class="img_products" src="@/assets/img/jpg/terroir.jpg" alt="">
-          </div>
-          <!-- <div class="storie_img_2">
-            <img src="@/assets/img/jpg/img_2.png" alt="">
-
-          </div> -->
           <div class="storie_content">
             <div class="storie_title">
               <div class="title_before">
@@ -21,11 +14,9 @@
             <div class="content_text">
               <p>Notre secret : de bons produits achetés directement au <strong>producteur</strong>, une équipe passionnée, motivée et quelques bons livres de grand-mères.  Bon on avoue : il nous aura fallu 5 ans, beaucoup de travail, de nombreux voyages et autant de rencontres pour pouvoir vous proposer en toute humilité notre expertise en la matière. Pourquoi chercher compliqué quand nous pouvons vous régaler en toute simplicité!</p>
             </div>
-            <div class="btn_hero">
-              <button> <svg xmlns="http://www.w3.org/2000/svg" width="23.242" height="16.215" viewBox="0 0 23.242 16.215">
-                <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#fff"/>
-                </svg>Notre histoire</button>
           </div>
+           <div class="storie_img">
+            <img class="img_products" src="@/assets/img/jpg/terroir.jpg" alt="">
           </div>
         </div>
       </section>
@@ -47,12 +38,19 @@ export default {
 }
 
 .storie {
-  display: flex; 
-  background-color: #fff;
+  display: flex;
+  flex-flow: column; 
+}
+
+.block_storie {
+  display: flex;
+  flex-flow: column; 
 }
 
 .storie_img {
   display: flex;
+  padding: 0 15px;
+  margin-bottom: 50px;
 }
 
 .storie_img_2 img{
@@ -63,7 +61,9 @@ export default {
 .storie_img img {
   object-fit: cover;
   width: 100%; 
-  height: 300px;
+  display: flex; 
+  margin: auto;
+  height: 400px;
 }
 
 
@@ -113,7 +113,7 @@ export default {
   font-family: bebas-neue-pro-expanded, sans-serif; 
   color: var(--black);
   font-size: 16px; 
-  line-height: 26px; 
+  line-height: 28px; 
   margin-bottom: 10px;
 }
 

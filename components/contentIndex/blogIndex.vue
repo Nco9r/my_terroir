@@ -60,7 +60,7 @@ export default {
 
 .blog {
     padding: 0 15px;
-    background-color: #fff;
+
 }
 
 .orange {

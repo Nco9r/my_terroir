@@ -10,7 +10,7 @@
       <traiteur/>
       <boutique/>
       <clients/>
-      <blog-index/>
+      <!-- <blog-index/> -->
       <newsletters/>
       <theFooter/>
     </div>
@@ -28,7 +28,7 @@ import concept from '~/components/contentIndex/concept'
 import traiteur from'~/components/contentIndex/traiteur'
 import boutique from'~/components/contentIndex/boutique'
 import clients from'~/components/contentIndex/clients'
-import blogIndex from'~/components/contentIndex/blogIndex'
+// import blogIndex from'~/components/contentIndex/blogIndex'
 import newsletters from '~/components/default/newsletters'
 import theFooter from '~/components/default/theFooter';
 
@@ -54,7 +54,7 @@ export default {
     traiteur,
     boutique,
     clients,
-    blogIndex,
+    // blogIndex,
     newsletters,
     theFooter
   }, 

@@ -1,5 +1,6 @@
 <template>
   <section class="concept">
+      <hr class="cup">
       <div class="block_concept">
           <div class="title_concept">
            <div class="title_before">
@@ -44,13 +45,22 @@ export default {
 
 <style scoped>
 
+.cup {
+    padding: 0 50px;
+    height: 1px;
+    width: 80%;
+    background-color: var(--black);
+    border: none;
+    display: flex; 
+    margin: auto; 
+}
+
 .orange {
   color: var(--orange); 
   font-weight: bold; 
 }
 
 .concept {
-    background-color: var(--gray);
     background-size: 100%;
 }
 

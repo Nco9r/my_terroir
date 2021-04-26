@@ -29,7 +29,7 @@ export default {
 
 .logo {
   padding: 20px 20px;
-  display: flex; 
+  display: none; 
   background-color: var(--gray);
   flex-flow: row nowrap; 
   overflow-x: scroll;
